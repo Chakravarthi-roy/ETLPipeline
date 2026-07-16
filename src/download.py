@@ -57,7 +57,7 @@ def download_metadata():
     rows = []
     for i, example in enumerate(stream):
         rows.append({field: example.get(field) for field in META_FIELDS})
-        if (i + 1) % 100_000 == 0:
+        if (i + 1) % 10_000 == 0:
             logger.info(f"  streamed {i + 1:,} products so far")
 
     meta = pd.DataFrame(rows)

@@ -10,6 +10,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 CATEGORY = os.getenv("CATEGORY", "Office_Products")
 TARGET_ROWS = int(os.getenv("TARGET_ROWS", 1_500_000))
+DOWNLOAD_LIMIT = int(os.getenv("DOWNLOAD_LIMIT", 2_000_000))
 RANDOM_SEED = int(os.getenv("RANDOM_SEED", 42))
 
 RAW_DATA_DIR = os.path.join(BASE_DIR, os.getenv("RAW_DATA_DIR", "data/raw"))
